@@ -188,19 +188,6 @@ train_losses, val_losses = trainer.fit(epochs=20)
 
 Adding a projection bridge from the vision encoder into the causal LM's embedding space to enable **image captioning** — essentially building a minimal [LLaVA](https://arxiv.org/abs/2304.08485) on top of this CLIP backbone.
 
-## Project Structure
-
-```
-├── model.py            # VitEncoder, TextEncoder, ClipTransformer
-├── trainer.py          # CLIPTrainer with early stopping & checkpointing
-├── dataset.py          # DfLoader (Flickr30k DataLoader)
-├── best_clip/          # Saved checkpoints
-│   ├── projections.pt
-│   ├── vision_encoder.pt
-│   └── lora_weights/
-└── README.md
-```
-
 ## Requirements
 
 - Python 3.10+
